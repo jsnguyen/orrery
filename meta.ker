@@ -1,0 +1,4 @@
+\begindata
+
+KERNELS_TO_LOAD = ( '/home/jsnguyen/ephemeris_data/naif0012.tls', 
+                    '/home/jsnguyen/ephemeris_data/de438.bsp')
