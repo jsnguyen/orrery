@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "SpiceUsr.h"
 #include "SpiceZfc.h"
 #include "orrery/threeVector.h"
@@ -25,11 +26,17 @@ typedef enum {
 
 typedef struct{
   char name[64];
+  double time;
   ThreeVector pos[3],ang_mom[3];
 } Body;
 
-void LoadMetaKernel(char *filename);
-void GetBodyCoordinates(char *date, char *body, double coords[3]);
+void CopyString(char *dest, char *source, int dest_size);
+void CSPICELoadMetaKernel(char *filename);
 
+void BodySetName(Body *b, char *name);
+void BodyUpdateCoordinatesDate(Body *b, char *date);
+void BodyUpdateCoordinatesEphemerisTime(Body *b, double ephemeris_time);
+
+void BodyPrint(Body b);
 
 #endif

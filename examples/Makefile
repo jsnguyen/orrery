@@ -23,7 +23,8 @@ _COMMA=,
 _RPATHS=$(addprefix -Wl$(_COMMA)-rpath$(_COMMA),$(_LIBDIRS))
 LDFLAGS=-O3 $(INCDIRS) $(LIBDIRS) $(_RPATHS) $(LIBS) $(CSPICE_LIB)
 
-_SRCFILES=cspice_test.c
+_SRCFILES=bodyTest.c \
+					solarSystemTest.c
 
 SRCS=$(addprefix $(SRCDIR)/,$(_SRCFILES))
 

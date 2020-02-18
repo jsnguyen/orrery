@@ -4,14 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "orrery/body.h"
+
+#define N_PLANETS_SOLAR_SYSTEM 8
 
 typedef struct{
-  Body planets[8];
+  Body sun;
+  Body planets[N_PLANETS_SOLAR_SYSTEM];
   double time; // ephemeris time
 } SolarSystem;
 
+void SolarSystemInitialize(SolarSystem *ss, double ephemeris_time);
+void SolarSystemUpdateCoordinates(SolarSystem *ss, double ephemeris_time);
 
-SolarSystem* SolarSystemCreate();
-void SolarSystemDestroy();
-
+void SolarSystemPrint(SolarSystem ss);
 #endif

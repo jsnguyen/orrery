@@ -17,6 +17,12 @@ void ThreeVectorSet(ThreeVector *tv, double i, double j, double k){
   tv->k=k;
 }
 
+void ThreeVectorSetArray(ThreeVector *tv, double arr[3]){
+  tv->i=arr[0];
+  tv->j=arr[1];
+  tv->k=arr[2];
+}
+
 void ThreeVectorDestroy(ThreeVector *tv){
   free(tv);
 }

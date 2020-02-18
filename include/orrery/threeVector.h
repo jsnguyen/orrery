@@ -12,6 +12,7 @@ typedef struct {
 ThreeVector* ThreeVectorCreate();
 void ThreeVectorSetZero(ThreeVector *tv);
 void ThreeVectorSet(ThreeVector *tv, double i, double j, double k);
+void ThreeVectorSetArray(ThreeVector *tv, double arr[3]);
 void ThreeVectorDestroy(ThreeVector *tv);
 
 void ThreeVectorSetI (ThreeVector *tv, double i);

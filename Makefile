@@ -20,7 +20,9 @@ LIBS=$(addprefix -l,$(_LIBS))
 CXXFLAGS=-O3 -Wall $(INCDIRS) -fPIC 
 LDFLAGS=-O3 -shared $(INCDIRS) $(LIBDIRS) $(LIBS) $(CSPICE_LIB)
 
-_SRCFILES=orrery.c
+_SRCFILES=threeVector.c \
+					body.c \
+					solarSystem.c
 
 SRCS=$(addprefix $(SRCDIR)/,$(_SRCFILES))
 
